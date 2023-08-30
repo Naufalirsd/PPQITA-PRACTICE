@@ -9,6 +9,13 @@
 7.  jalanin `git commit -m '<pesan>'`
 8.  jalanin `git push -u origin master`
 
+## Instalasi Server
+
+1. install express di terminal `npm i express`
+2. buat file dengan nama `app.js`
+3. untuk menjalankan ketik node app.js di terminal
+4. untuk mengcancel server gunakan ctrl+c
+
 ## Mengganti nama branch
 
 `git branch -M namaBranch`
