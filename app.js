@@ -6,6 +6,17 @@ app.get("/", (req, res) => {
     res.send("Hello World");
 });
 
+app.post("/", (req, res) => {
+    res.send("post data");
+});
+
+app.put("/", (req, res) => {
+    res.send("update data");
+});
+
+app.delete("/", (req, res) => {
+    res.send("delete data");
+});
 // req adalah singkatan dari request yang isinya dikirimkan oleh client.
 // contoh seperti body, parameter, query
 // res adalah singkatan dari respons yang isinya kita kirim ke client
