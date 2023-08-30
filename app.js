@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
@@ -10,7 +12,7 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     let name = req.body.name;
 
-    res.send("Assalamu'alaikum bang " + name);
+    res.send("Assalamualaikum kak" + name);
 });
 
 app.put("/", (req, res) => {

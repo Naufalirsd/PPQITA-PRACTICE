@@ -14,6 +14,6 @@
 -   untuk update
     `curl -X PUT http://localhost:3000`
 -   untuk tambah data
-    `curl -X POST -H 'Content-Type: application' -d '{"name":"Naufal"}' http://localhost:3000`
+    `curl -X POST -H 'Content-Type: application/json' -d '{"name": " Naufal"}' http://localhost:3000`
 -   untuk delete data
     `curl -X DELETE http://localhost:3000`
