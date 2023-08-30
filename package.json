@@ -1,15 +1,25 @@
 {
-  "name": "latihan_2-_crud",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.6.4"
-  }
+    "dependencies": {
+        "express": "^4.18.2"
+    },
+    "name": "ppqita_practices",
+    "description": "practice crud and validation",
+    "version": "1.0.0",
+    "main": "app.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "npx jest",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Naufalirsd/Crud_BackEnd.git"
+    },
+    "keywords": [],
+    "author": "Naufal Irsyad Ihsan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Naufalirsd/Crud_BackEnd/issues"
+    },
+    "homepage": "https://github.com/Naufalirsd/Crud_BackEnd#readme"
 }
