@@ -1,4 +1,4 @@
-# Crud Test
+# Tutorial
 
 Buat Repo di Github
 jalanin git init
