@@ -6,8 +6,11 @@ app.get("/", (req, res) => {
     res.send("Hello World");
 });
 
+// membuat data
 app.post("/", (req, res) => {
-    res.send("post data");
+    let name = req.body.name;
+
+    res.send("Assalamu'alaikum bang " + name);
 });
 
 app.put("/", (req, res) => {
