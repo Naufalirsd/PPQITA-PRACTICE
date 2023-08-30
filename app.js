@@ -9,4 +9,6 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
     console.log("Hai Bang, Servermu udah jalan di localhost:3000");
 });
+
 // Jalaninnya dengan menulis node app.js di terminal
+// Matikan server dengan ctrl+c
