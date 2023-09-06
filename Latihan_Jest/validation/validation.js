@@ -24,6 +24,10 @@ const ageValid = (age) => {
     if (age >= 90) {
         return { error: true, message: "Moreage" };
     }
+
+    if ((age = true)) {
+        return { error: false, message: "Confirm", data: 16 };
+    }
 };
 
 module.exports = { nameValidation, ageValid };
