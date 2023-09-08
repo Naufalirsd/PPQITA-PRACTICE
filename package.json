@@ -6,10 +6,13 @@
     "description": "practice crud and validation",
     "version": "1.0.1",
     "main": "app.js",
-    "devDependencies": {},
+    "devDependencies": {
+        "supertest": "^6.3.3"
+    },
     "scripts": {
         "test": "npx jest",
-        "start": "node app.js"
+        "start": "node app.js",
+        "dev": "node --watch app.js"
     },
     "repository": {
         "type": "git",

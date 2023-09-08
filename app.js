@@ -1,6 +1,10 @@
 const express = require("express");
+const { postDataUserHandler } = require("./handlers/post-data-user-handler");
+const { getDataUserHandler } = require("./handlers/get-data-user-handler");
+const { putDataUserHandler } = require("./handlers/put-data-user-handler");
+const { delDataUserHandler } = require("./handlers/del-data-user-handler");
 const app = express();
-const { nameValidation, ageValid } = require("./validation/validation");
+
 // Example
 /*
     - req = singkatan dari request. Yang isinya yang dikirimkan oleh client. Contoh seperti body, parameter, query
@@ -9,53 +13,19 @@ const { nameValidation, ageValid } = require("./validation/validation");
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("Hello world");
-});
+app.get("/", getDataUserHandler);
 
-app.post("/", (req, res) => {
-    if (!req.body.name) {
-        return res.send({
-            error: true,
-            message: "tidak memiliki parameter nama",
-        });
-    }
+app.post("/", postDataUserHandler);
 
-    if (!req.body.age) {
-        return res.send({
-            error: true,
-            message: "tidak memiliki parameter umur",
-        });
-    }
+app.put("/", putDataUserHandler);
 
-    let { name, age } = req.body;
-
-    // Mengambil data nama
-    let realNameRes = nameValidation(name);
-    let realAgeRes = ageValid(age);
-
-    if (realNameRes.error) {
-        return res.send(realNameRes);
-    }
-
-    if (realAgeRes.error) {
-        return res.send(realAgeRes);
-    }
-
-    res.send({ data: { name: realNameRes.data, age: realAgeRes.data } });
-});
-
-app.put("/", (req, res) => {
-    res.send("Update data");
-});
-
-app.delete("/", (req, res) => {
-    res.send("Delete data");
-});
+app.delete("/", delDataUserHandler);
 
 // Untuk running
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
     console.log("Halo cuyy, Server sudah jalan di https://localhost:3000");
 });
+
+module.exports = server;
 
 // Untuk menjalankan ketik node app.js di terminal. Untuk cancel tekan Ctr + c.

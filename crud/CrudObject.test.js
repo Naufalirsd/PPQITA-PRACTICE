@@ -4,6 +4,7 @@ const {
     findData,
     updateData,
     deleteData,
+    findByname,
 } = require("./CrudObject");
 
 describe("test Crud Objects", () => {
@@ -47,7 +48,7 @@ describe("test Crud Objects", () => {
         // menggunakan objectArray.findByIdx((value)=>value.id === id)
         let result = updateData(bank, 1, "arifin");
         expect(result).toEqual([
-            { id: 1, name: "samsul" },
+            { id: 1, name: "arifin" },
             { id: 2, name: "bambang" },
         ]);
     });
@@ -63,4 +64,15 @@ describe("test Crud Objects", () => {
         let result = deleteData(bank, 1);
         expect(result).toEqual([{ id: 2, name: "bambang" }]);
     });
+
+     test("when find a object by name should success", () => {
+         let bank = [
+             { id: 1, name: "samsul" },
+             { id: 2, name: "bambang" },
+         ];
+         let result = findByname(bank, "samsul"); // menggunakan dataArray.find((value)=>value.id == id)
+
+         // menampilkan hanya object yang dibutuhkan
+         expect(result).toEqual({ id: 1, name: "samsul" });
+     });
 });
