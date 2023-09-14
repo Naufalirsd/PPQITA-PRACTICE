@@ -21,6 +21,11 @@ const editDataName = (id, name) => {
 };
 
 const removeData = (id) => {
+
+    if(typeof id === 'string') {
+        id = parseInt(id)
+    }
+
     dataMemory = deleteData(dataMemory, id);
     return dataMemory;
 };

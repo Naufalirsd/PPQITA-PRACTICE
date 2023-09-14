@@ -11,19 +11,23 @@ const app = express();
     - res = singkatan dari response. Yang isinya kita kirim ke client. Contoh seperti data, json, html, dan codeHTTP (default:200)
 */
 
+app.use(express.static("public"));
+
 app.use(express.json());
 
-app.get("/", getDataUserHandler);
+app.get("/api/user", getDataUserHandler);
 
-app.post("/", postDataUserHandler);
+app.post("/api/user", postDataUserHandler);
 
-app.put("/", putDataUserHandler);
+app.put("/api/user", putDataUserHandler);
 
-app.delete("/", delDataUserHandler);
+app.delete("/api/user", delDataUserHandler);
+
+const port = 3001;
 
 // Untuk running
-const server = app.listen(3000, () => {
-    console.log("Halo cuyy, Server sudah jalan di https://localhost:3000");
+const server = app.listen(port, () => {
+    console.log("Halo cuyy, Server sudah jalan di http://localhost:" + port);
 });
 
 module.exports = server;
