@@ -7,13 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 p-4">
+<body class="bg-blue-300 p-4">
   <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
-    <h1 class="text-2xl font-semibold mb-4">List Data</h1>
+    <h1 class="text-2xl font-semibold mb-4 text-colored text-center">List Data</h1>
     <!-- tombol -->
-    <a href="./create">Create</a>
-    <a href="./edit">Edit</a>
-    <a href="./delete">Hapus</a>
+    <div class="mb-6 text-center flex justify-evenly">
+      <a class="mx-2 py-2 px-3 bg-green-100 rounded" href="./create">Create</a>
+      <a class="mx-2 py-2 px-3 bg-yellow-100 rounded" href="./edit">Edit</a>
+      <a class="mx-2 py-2 px-3 bg-red-100 rounded" href="./delete">Hapus</a>
+    </div>
+    
     <!-- table -->
     <table class="w-full border border-collapse">
       <thead>

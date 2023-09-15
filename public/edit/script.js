@@ -7,19 +7,19 @@ window.onload = () => {
 
         // mengambil data
         const name = document.getElementById('name').value
-        const age = document.getElementById('age').value
         const id = document.getElementById("id").value;
+        const age = document.getElementById("age").value; // Menambahkan baris ini
 
         const apiURL = 'http://localhost:3001/api/user'
 
         try {
             const res = await fetch(apiURL, {
-                method: 'PUT',
+                method: "PUT",
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify({id, age, name})
-            })    
+                body: JSON.stringify({ id, age: age, name }),
+            });    
 
         if(res.status !== 200) {
             alert('Cek kondisi anda atau cek data yang telah dimasukkan')
@@ -43,4 +43,9 @@ window.onload = () => {
         }
         
     })
+    
+   
+
+   
+       
 };

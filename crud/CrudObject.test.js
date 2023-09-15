@@ -38,20 +38,20 @@ describe("test Crud Objects", () => {
         expect(result).toEqual({ id: 2, name: "bambang" });
     });
 
-    test("when update data should success", () => {
-        let bank = [
-            { id: 1, name: "samsul" },
-            { id: 2, name: "bambang" },
-        ];
+      test("when update name should success", () => {
+          let bank = [
+              { id: 1, name: "samsul", age: 16 },
+              { id: 2, name: "bambang", age: 16 },
+          ];
 
-        // mengubah ID 1 dengan nama Arifin
-        // menggunakan objectArray.findByIdx((value)=>value.id === id)
-        let result = updateData(bank, 1, "arifin");
-        expect(result).toEqual([
-            { id: 1, name: "arifin" },
-            { id: 2, name: "bambang" },
-        ]);
-    });
+          // mengubah ID 1 dengan nama Arifin
+          // menggunakan objectArray.findByIdx((value)=>value.id === id)
+          let result = updateData(bank, 1, "arifin", 17);
+          expect(result).toEqual([
+              { id: 1, name: "arifin", age: 17 },
+              { id: 2, name: "bambang", age: 16 },
+          ]);
+      });
 
     test("when delete data should success", () => {
         let bank = [
