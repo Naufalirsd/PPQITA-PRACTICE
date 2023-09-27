@@ -7,12 +7,6 @@ window.onload = () => {
             const name = document.getElementById("nama").value;
             const age = document.getElementById("umur").value;
 
-            // Periksa apakah name adalah angka
-            if (!isNaN(name)) {
-                alert("Nama tidak boleh berupa angka.");
-                return; // Hentikan proses pengiriman jika nama adalah angka
-            }
-
             // Ganti URL dengan URL API yang sesuai
             const apiUrl = "http://localhost:3001/api/user";
 
@@ -27,10 +21,14 @@ window.onload = () => {
                 .then((response) => response.json())
                 .then((data) => {
                     // Manipulasi respons dari API sesuai kebutuhan Anda
+                    if (data.error) {
+                        alert(data.message);
+                        return;
+                    }
                     window.open("/", "_self"); // untuk kembali ke awal / list data
                 })
+
                 .catch((error) => {
-                    console.error("Terjadi kesalahan:", error);
                     alert("Terjadi kesalahan saat mengirim data ke API.");
                 });
         });

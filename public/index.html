@@ -7,30 +7,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-blue-300 p-4">
+<body class="bg-blue-400 p-4">
   <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
-    <h1 class="text-2xl font-semibold mb-4 text-colored text-center">List Data</h1>
-    <!-- tombol -->
-    <div class="mb-6 text-center flex justify-evenly">
-      <a class="mx-2 py-2 px-3 bg-green-100 rounded" href="./create">Create</a>
-      <a class="mx-2 py-2 px-3 bg-yellow-100 rounded" href="./edit">Edit</a>
-      <a class="mx-2 py-2 px-3 bg-red-100 rounded" href="./delete">Hapus</a>
+    <h1 class="text-2xl font-semibold mb-4 text-center">List Data</h1>
+
+    <div class="flex justify-evenly">
+      <a href="/create">Create</a>
+      <a href="/edit">Edit</a>
+      <a href="/delete">Delete</a>
     </div>
-    
-    <!-- table -->
-    <table class="w-full border border-collapse">
+
+    <table class="w-full border border-collapse mt-4">
+
       <thead>
+
         <tr>
-          <th class="border border-slate-500 text-left">Id</th>
-          <th class="border border-slate-500  text-left">Name</th>
-          <th class="border border-slate-500  text-left">Umur</th>
+          <td class="border border-slate-600 px-5">Id</td>
+          <td class="border border-slate-600 px-5">Name</td>
+          <td class="border border-slate-600 px-5">Age</td>
         </tr>
+        
       </thead>
-      <tbody id="list-data">
-      </tbody>
+
+      <tbody id="list-data"></tbody>
+
     </table>
+
   </div>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

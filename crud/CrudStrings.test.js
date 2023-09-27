@@ -3,7 +3,7 @@ const {
     updateData,
     readByIdx,
     deleteData,
-} = require("./CrudStrings");
+} = require("./CrudString");
 
 describe("test CRUDStrings", () => {
     test("create should success", () => {

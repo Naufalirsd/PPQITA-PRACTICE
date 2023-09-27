@@ -1,6 +1,7 @@
 {
     "dependencies": {
-        "express": "^4.18.2"
+        "express": "^4.18.2",
+        "mongodb": "^6.1.0"
     },
     "name": "ppqita_practices",
     "description": "practice crud and validation",
@@ -10,7 +11,7 @@
         "supertest": "^6.3.3"
     },
     "scripts": {
-        "test": "npx jest",
+        "test": "npx jest --detectOpenHandles",
         "start": "node app.js",
         "dev": "node --watch app.js"
     },

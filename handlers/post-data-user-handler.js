@@ -1,11 +1,8 @@
 const {
     showAllData,
     savingData,
-} = require("../gateaways/memory-storage-gateway");
-const {
-    nameValidation,
-    ageValid,
-} = require("../Latihan_Jest/validation/validation");
+} = require("../gateways/memory-storage-gateway");
+const { nameValidation, ageValid } = require("../Latihan_Jest/validation/validation");
 
 const postDataUserHandler = (req, res) => {
     if (!req.body.name) {

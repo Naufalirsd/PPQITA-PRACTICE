@@ -23,9 +23,9 @@ app.put("/api/user", putDataUserHandler);
 
 app.delete("/api/user", delDataUserHandler);
 
+// Untuk running
 const port = 3001;
 
-// Untuk running
 const server = app.listen(port, () => {
     console.log("Halo cuyy, Server sudah jalan di http://localhost:" + port);
 });
