@@ -1,7 +1,11 @@
-const { showAllData } = require("../gateways/memory-storage-gateway");
+const { showAllData } = require("../gateways/mongodb-gateway");
 
-const getDataUserHandler = (req, res) => {
-    res.send({ data: showAllData() });
+const getDataUserHandler = async (req, res) => {
+    try {
+        res.send({ data: await showAllData() });
+    } catch (error) {
+        res.send({ error: true, message: error.message });
+    }
 };
 
 module.exports = { getDataUserHandler };
