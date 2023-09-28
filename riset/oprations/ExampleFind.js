@@ -31,6 +31,22 @@ const findOneById = async (collection, id) => {
     }
 };
 
+const isIdExist = async (collection, id) => {
+    try {
+        const dataRes = await collection.findOne({ id });
+
+        let hasil;
+        if(dataRes) {
+            hasil = true;
+        } else {
+            hasil = false;
+        }
+        return !!dataRes;
+    } catch (error) {
+        console.error('info error is id exist: ', error)
+    }
+}
+
 const findOneWithQuerySpecific = async (collection) => {
     try {
         const dataRes = await collection.find({ age: { $gt: 16 } });
@@ -42,4 +58,4 @@ const findOneWithQuerySpecific = async (collection) => {
     }
 };
 
-module.exports = { findMany, findOne, findOneById, findOneWithQuerySpecific };
+module.exports = { findMany, findOne, findOneById, findOneWithQuerySpecific, isIdExist };
