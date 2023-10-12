@@ -2,7 +2,7 @@ const express = require("express");
 
 const { connectionDB } = require("./mongodbGateway");
 
-const uri = "mongodb+srv://ppqita:santri@ppqitadb.76fharf.mongodb.net/";
+const uri = "mongodb+srv://ppqita:santri@ppqitadb.9ybiiar.mongodb.net/";
 
 let myCollection, myClient;
 
